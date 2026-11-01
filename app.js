@@ -34,7 +34,8 @@
   });
 
   document.querySelectorAll('[data-period-detail]').forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
       const detail = document.getElementById(button.dataset.periodDetail);
       if (!detail) return;
       detail.open = true;
