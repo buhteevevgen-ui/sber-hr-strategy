@@ -7,7 +7,7 @@
     const tabs = Array.from(group.querySelectorAll('[role="tab"]'));
     const panels = Array.from(group.querySelectorAll('[role="tabpanel"]'));
     const tablist = group.querySelector('[role="tablist"]');
-    const labels = {'hiring-segments':'Сегмент найма','funnel-segments':'Данные по сегментам','roadmap-years':'Год роадмапа'};
+    const labels = {'hiring-segments':'Сегмент найма','roadmap-years':'Год роадмапа'};
     tablist.setAttribute('aria-label', labels[group.dataset.tabs] || 'Представление');
 
     function select(index, focus = false) {
