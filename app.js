@@ -33,6 +33,23 @@
     select(Number(group.dataset.selected) || 0);
   });
 
+  document.querySelectorAll('[data-period-detail]').forEach(button => {
+    button.addEventListener('click', () => {
+      const detail = document.getElementById(button.dataset.periodDetail);
+      if (!detail) return;
+      detail.open = true;
+      detail.scrollIntoView({block: 'start'});
+      detail.querySelector('summary').focus({preventScroll: true});
+    });
+  });
+  document.querySelectorAll('.period-detail').forEach(detail => {
+    detail.addEventListener('toggle', () => {
+      document.querySelectorAll('[data-period-detail]').forEach(button => {
+        if (button.dataset.periodDetail === detail.id) button.setAttribute('aria-expanded', String(detail.open));
+      });
+    });
+  });
+
   const links = Array.from(document.querySelectorAll('.section-nav a'));
   const sections = links.map(link => document.querySelector(link.hash)).filter(Boolean);
   let scheduled = false;
