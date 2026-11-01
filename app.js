@@ -33,19 +33,6 @@
     select(Number(group.dataset.selected) || 0);
   });
 
-  document.querySelectorAll('[data-roadmap-year]').forEach(link => {
-    link.addEventListener('click', event => {
-      const target = document.querySelector(link.hash);
-      const yearTabs = Array.from(document.querySelectorAll('[data-tabs="roadmap-years"] [role="tab"]'));
-      const yearTab = yearTabs.find(tab => tab.textContent.trim() === link.dataset.roadmapYear);
-      if (!target || !yearTab) return;
-      event.preventDefault();
-      yearTab.click();
-      target.scrollIntoView({block: 'start'});
-      target.focus({preventScroll: true});
-    });
-  });
-
   const links = Array.from(document.querySelectorAll('.section-nav a'));
   const sections = links.map(link => document.querySelector(link.hash)).filter(Boolean);
   let scheduled = false;
