@@ -16,10 +16,6 @@
         tab.tabIndex = i === index ? 0 : -1;
         panels[i].hidden = i !== index;
       });
-      if (group.dataset.tabs === 'roadmap-years') {
-        const year = tabs[index].textContent.trim();
-        document.querySelectorAll('[data-year-row]').forEach(row => { row.hidden = row.dataset.yearRow !== year; });
-      }
       if (focus) tabs[index].focus();
     }
 
