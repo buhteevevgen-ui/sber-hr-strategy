@@ -60,6 +60,7 @@ figcaption{font-size:13px;color:#666;margin-bottom:16px}
 .quarter-node:after{content:"";position:absolute;left:16px;top:-10px;height:9px;border-left:1px solid #b9cdb5}
 .quarter-label{font-size:11px;color:#6c7d65;display:block}.quarter-node strong{display:block;font-size:13px;line-height:1.5;margin:7px 0}.quarter-segment{font-size:10px;color:#666;display:block}
 .graphic-note{font-size:12px;color:#666;margin-top:10px}
+.terminology-note{font-size:13px;color:#73796e;line-height:1.6}
 .document-details{border-block:1px solid #ddd;margin:18px 0 28px}.document-details summary{cursor:pointer;font-size:13px;padding:12px 0;color:#17653b;text-decoration:underline;text-underline-offset:3px}
 .document-details summary:focus-visible{outline:2px solid #17653b;outline-offset:3px}
 .sprint-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;list-style:none;padding:0;margin:20px 0 18px;counter-reset:sprint}
